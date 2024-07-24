@@ -37,7 +37,6 @@ def main(params):
     try:
         df_iter = pd.read_csv(csv_name, iterator=True, chunksize=100000, compression='gzip')
         df = next(df_iter)
-        print(df.head())
     except Exception as e:
         print(f"Error reading the CSV file: {e}")
         return
